@@ -36,31 +36,31 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
+            <TextField fx:id="formularioId" editable="false" GridPane.columnIndex="1" />
             <Label fx:id="textoNome" text="Nome" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
+            <TextField fx:id="formularioNome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label fx:id="textoEmail" text="E-mail" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
+            <TextField fx:id="formularioEmail" prefWidth="155.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label fx:id="textoDataNascimento" text="Data de Nascimento" GridPane.rowIndex="3">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
+            <DatePicker fx:id="formularioDataNascimento" editable="false" prefHeight="25.0" prefWidth="474.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label fx:id="textoSalario" text="Salário" GridPane.rowIndex="4">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
+            <TextField fx:id="formularioSalario" prefHeight="25.0" prefWidth="324.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label fx:id="textoDepartamento" text="Departamento" GridPane.rowIndex="5">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <TextField fx:id="formularioId" editable="false" GridPane.columnIndex="1" />
-            <TextField fx:id="formularioNome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="formularioEmail" prefWidth="155.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <DatePicker fx:id="formularioDataNascimento" editable="false" prefHeight="25.0" prefWidth="474.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="formularioSalario" prefHeight="25.0" prefWidth="324.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <ComboBox fx:id="formularioDepartamento" prefHeight="25.0" prefWidth="470.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <HBox fx:id="caixa" prefHeight="34.0" prefWidth="281.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <children>

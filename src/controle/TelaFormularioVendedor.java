@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -34,7 +35,7 @@ import persistencia.DepartamentoDAO;
 import persistencia.VendedorDAO;
 import servico.Utilitario;
 
-public class TelaFormularioVendedor implements Initializable,ChangeListener<String> {
+public class TelaFormularioVendedor implements Initializable,ChangeListener<String>,Runnable {
     
     @FXML
     private AnchorPane painel;
@@ -99,6 +100,7 @@ public class TelaFormularioVendedor implements Initializable,ChangeListener<Stri
     @Override
     public void initialize(URL endereco, ResourceBundle recurso) {
         try {
+            Platform.runLater(this);
             formularioSalario.textProperty().addListener(this);
             DepartamentoDAO departamentoBd = new DepartamentoDAO();
             List<Departamento> departamentos = departamentoBd.buscaTodos();
@@ -123,6 +125,11 @@ public class TelaFormularioVendedor implements Initializable,ChangeListener<Stri
             if (!newValue.equals(""))
                 formularioSalario.setText(valorFormatado.format(Double.parseDouble(newValue)));
         }
+    }
+    
+    @Override
+    public void run() {
+        formularioNome.requestFocus();
     }
   
     @FXML

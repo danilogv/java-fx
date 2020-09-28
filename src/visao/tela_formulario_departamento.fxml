@@ -29,12 +29,12 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
+            <TextField fx:id="formularioId" editable="false" prefHeight="25.0" prefWidth="342.0" GridPane.columnIndex="1" />
             <Label fx:id="textoNome" text="Nome" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="formularioId" editable="false" prefHeight="25.0" prefWidth="342.0" GridPane.columnIndex="1" />
             <TextField fx:id="formularioNome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <HBox fx:id="caixa" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>

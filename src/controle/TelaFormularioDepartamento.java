@@ -1,8 +1,12 @@
 package controle;
 
 import excecao.ValidationException;
+import java.net.URL;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -16,7 +20,7 @@ import modelo.Departamento;
 import persistencia.DepartamentoDAO;
 import servico.Utilitario;
 
-public class TelaFormularioDepartamento {
+public class TelaFormularioDepartamento implements Initializable,Runnable {
     
     @FXML
     private AnchorPane painel;
@@ -49,6 +53,16 @@ public class TelaFormularioDepartamento {
     private Button botaoCancelar;
     
     private final Utilitario utilitario = new Utilitario();
+    
+    @Override
+    public void initialize(URL endereco, ResourceBundle recurso) {
+        Platform.runLater(this);
+    }
+    
+    @Override
+    public void run() {
+        formularioNome.requestFocus();
+    }
     
     @FXML
     public void onBotaoSalvarAction() {
